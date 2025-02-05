@@ -1,4 +1,4 @@
-import campdata from "./data/campdata.js";
+import campdata from "./campdata.js";
 const gridCardList = document.getElementById("grid__card--list");
 
 campdata.forEach((x) => {
