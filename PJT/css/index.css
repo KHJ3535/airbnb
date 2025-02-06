@@ -5,22 +5,17 @@
 }
 .main {
   width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-
   display: flex;
+  justify-content: space-between;
 }
-h1 {
-  width: 100%;
-}
+
 .main_save {
-  width: 100%;
   max-width: 1280px;
-  margin: 0 auto;
-
   display: flex;
-  justify-content: center;
   align-items: center;
+}
+.main_save > div {
+  padding-left: 12px;
 }
 .share {
   background-color: white;

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/mainGrid.css" />
     <link rel="stylesheet" href="css/mainCategory.css" />
+    <link rel="stylesheet" href="css/popup.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -15,13 +16,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script type="module" src="index.js" defer></script>
-    <script type="module" src="data.js" defer></script>
-    <script type="module" src="scroll.js" defer></script>
+    <script type="module" src="js/index.js" defer></script>
+    <script type="module" src="data/data.js" defer></script>
+    <script type="module" src="js/scroll.js" defer></script>
   </head>
   <body>
     <header>
-      <nav class="container">
+      <nav class="max__container">
         <div class="catogory__container">
           <ul id="main__category" class="main__category">
             <li id="camping" class="category__select">
@@ -164,11 +165,158 @@
               <i class="fa-solid fa-angle-right"></i>
             </button>
           </div>
-          <div id="category__filter" class="category__filter"></div>
+          <div id="category__filter" class="category__filter">
+            <i class="fa-solid fa-sliders"></i>
+            <span>필터</span>
+          </div>
+          <div class="filter__popup" id="filter__popup"></div>
         </div>
       </nav>
+      <div class="popup">
+        <div class="popup__header">
+          <h2>필터</h2>
+        </div>
+        <div class="popup__info">
+          <div class="popup__lodging">
+            <p class="popup__title">숙소 유형</p>
+            <div class="popup__lodging--type">
+              <div class="type__all">모든 유형</div>
+              <div class="type__all">방</div>
+              <div class="type__all">집 전체</div>
+            </div>
+          </div>
+          <div class="popup__price">
+            <p class="popup__title">숙소 유형</p>
+            <p class="popup__miniTitle">1박 요금(수수료 및 세금 포함)</p>
+            <div class="price__filter">
+              <div class="price__min">
+                <p>최저</p>
+                <input type="text" />
+              </div>
+              <div class="price__max">
+                <p>최고</p>
+                <input type="text" />
+              </div>
+            </div>
+          </div>
+          <div class="popup__room">
+            <div class="popup__bedroom">
+              <p>침실</p>
+              <div>
+                <button class="prev__btn"></button>
+                <input type="text" class="room__quantity" />
+                <button class="next__btn"></button>
+              </div>
+            </div>
+            <div class="popup__amenities">
+              <div class="popup__essential">
+                <p>필수</p>
+                <div class="popup__attribute--select"><p>와이파이/p></p></div>
+                <div class="popup__attribute--select"><p>주방/p></p></div>
+                <div class="popup__attribute--select"><p>세탁기/p></p></div>
+                <div class="popup__attribute--select"><p>건조기/p></p></div>
+                <div class="popup__attribute--select"><p>에어컨/p></p></div>
+                <div class="popup__attribute--select"><p>난방/p></p></div>
+                <div class="popup__attribute--select">
+                  <p>업무 전용 공간/p></p>
+                </div>
+                <div class="popup__attribute--select"><p>TV/p></p></div>
+                <div class="popup__attribute--select">
+                  <p>헤어드라이어/p></p>
+                </div>
+                <div class="popup__attribute--select"><p>다리미/p></p></div>
+              </div>
+              <div class="popup__characteristic">
+                <p>특징</p>
+                <div class="popup__attribute--select"><p>수영장/p></p></div>
+                <div class="popup__attribute--select"><p>대형욕조/p></p></div>
+                <div class="popup__attribute--select">
+                  <p>무료 주차 공간/p></p>
+                </div>
+                <div class="popup__attribute--select">
+                  <p>전기차 충전시설/p></p>
+                </div>
+                <div class="popup__attribute--select"><p>아기 침대/p></p></div>
+                <div class="popup__attribute--select">
+                  <p>킹사이즈 침대/p></p>
+                </div>
+                <div class="popup__attribute--select"><p>헬스장/p></p></div>
+                <div class="popup__attribute--select">
+                  <p>바비큐 그릴/p></p>
+                </div>
+                <div class="popup__attribute--select"><p>조식/p></p></div>
+                <div class="popup__attribute--select">
+                  <p>실내 벽난로/p></p>
+                </div>
+                <div class="popup__attribute--select"><p>흡연 가능/p></p></div>
+              </div>
+              <div class="popup__location">
+                <p>위치</p>
+                <div class="popup__attribute--select">
+                  <p>해변에 인접/p></p>
+                </div>
+                <div class="popup__attribute--select"><p>수변/p></p></div>
+                <div class="popup__attribute--select">
+                  <p>스키 타고 출입/p></p>
+                </div>
+              </div>
+              <div class="popup__safe">
+                <p>안전</p>
+                <div class="popup__attribute--select"><p>화재경보기/p></p></div>
+                <div class="popup__attribute--select">
+                  <p>일산화탄소 경보기/p></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="popup__reservation">
+            <div class="popup__attribute--select"><p>즉시예약/p></p></div>
+            <div class="popup__attribute--select"><p>셀프 체크인/p></p></div>
+            <div class="popup__attribute--select">
+              <p>반려동물 동반 가능/p></p>
+            </div>
+          </div>
+          <div class="popup__favor">
+            <div>
+              <img src="" alt="" />
+              <div class="guest__favor">
+                <h4>게스트 선호</h4>
+                <p>에어비앤비에서 가장 사랑받는 숙소를 소개합니다.</p>
+              </div>
+            </div>
+          </div>
+          <div class="popup__build--box"></div>
+          <div class="popup__build--type">
+            <div class="popup__attribute--select">
+              <p>단독 또는 다세대 주택/p></p>
+            </div>
+            <div class="popup__attribute--select"><p>아파트/p></p></div>
+            <div class="popup__attribute--select"><p>게스트용 별채/p></p></div>
+            <div class="popup__attribute--select"><p>호텔/p></p></div>
+          </div>
+          <div class="accessibility--box"></div>
+          <div class="popup__accessibility">
+            <p>게스트 출입구 및 주차장</p>
+            <input type="checkbox" />계단 없이 출입 가능
+            <input type="checkbox" />장애인용 주차 공간
+            <input type="checkbox" />너비 81cm 이상의 출입구
+            <p>침실</p>
+            <input type="checkbox" />계단이나 문턱 없는 침실
+            <input type="checkbox" />너비 81cm 이상의 출입구
+            <p>욕실</p>
+            <input type="checkbox" />계단이나 문턱 없는 침실
+            <input type="checkbox" />너비 81cm 이상의 출입구
+            <input type="checkbox" />변기 옆 고정 손잡이
+            <input type="checkbox" />샤워실 고정 손잡이
+            <input type="checkbox" />계단이나 문턱 없는 샤워실
+            <input type="checkbox" />샤워/목욕 의자
+            <p>장애인요 보조 장치</p>
+            <input type="checkbox" />천장형 또는 이동식 리프트
+          </div>
+        </div>
+      </div>
     </header>
-    <main class="container">
+    <main class="max__container">
       <div id="grid__card--list"></div>
     </main>
     <footer></footer>

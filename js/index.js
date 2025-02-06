@@ -1,4 +1,4 @@
-import data from "./data/data.js";
+import data from "../data/data.js";
 const gridCardList = document.getElementById("grid__card--list");
 const camp = document.getElementById("camping");
 const view = document.getElementById("bestview");
@@ -58,7 +58,7 @@ data.forEach((x) => {
       </a>
     `;
   card.addEventListener("click", (e) => {
-    location.href = `KHJ/abc.html?id=${id}`;
+    location.href = `PJT/index.html?id=${id}`;
   });
   gridCardList.appendChild(card);
 
@@ -106,7 +106,7 @@ data.forEach((x) => {
       `;
 
       card.addEventListener("click", (e) => {
-        location.href = `KHJ/abc.html?${v.listing.id}`;
+        location.href = `PJT/index.html?id=${id}`;
       });
 
       gridCardList.appendChild(card);
@@ -156,7 +156,7 @@ data.forEach((x) => {
       `;
 
       card.addEventListener("click", (e) => {
-        location.href = `KHJ/abc.html?${v.listing.id}`;
+        location.href = `PJT/index.html?id=${id}`;
       });
 
       gridCardList.appendChild(card);
@@ -206,7 +206,7 @@ data.forEach((x) => {
       `;
 
       card.addEventListener("click", (e) => {
-        location.href = `KHJ/abc.html?${v.listing.id}`;
+        location.href = `PJT/index.html?id=${id}`;
       });
 
       gridCardList.appendChild(card);
