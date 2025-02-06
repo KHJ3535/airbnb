@@ -1,26 +1,56 @@
 nav {
-  max-width: 1600px;
   width: 100%;
-  margin: auto;
+  position: fixed;
+  top: 0;
+  background-color: white;
+}
+
+.navcut {
+  height: 70px;
 }
 
 #nav__layout {
+  max-width: 1750px;
+  width: 100%;
+  margin: auto;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
+  justify-content: space-between;
+}
+#header__line {
+  width: 100%;
+  height: 1px;
+  background-color: #dddddd;
+  margin: 20px 0px 0px 0px;
+  transition: 1s all;
+}
+#nav__logoImg {
+  margin-top: 30px;
+}
 img {
   width: 100px;
   object-fit: cover;
-  display: flex;
+}
+
+#searchLayout {
+  margin-left: 170px;
+  transition: transform 0.35s ease-in-out, opacity 0.35s ease-in-out;
+}
+
+.searchLayout__small {
+  transform: scale(0.3);
 }
 
 #searchLayout__box {
   display: flex;
   gap: 19px;
+
   justify-content: center;
-  margin: 20px 0px 23px 220px;
+  margin: 20px 0px 23px 0px;
+}
+
+.slideup {
+  transform: translateY(-85%);
 }
 
 #searchLayout__play {
@@ -43,11 +73,32 @@ img {
   display: flex;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border: 1px solid #dddddd;
+  transition: transform 0.35s ease-in-out, opacity 0.35s ease-in-out;
   border-radius: 90px;
+}
+
+.searchbar__small {
+  width: 350px;
+  transform: scale(0.9);
+  max-height: 50px;
 }
 
 #searchbar__travel:hover + .line1 {
   opacity: 0;
+}
+
+#searchbar__checkin:hover + .line2 {
+  opacity: 0;
+}
+
+#searchbar__checkout:hover + .line3 {
+  opacity: 0;
+}
+
+.searchbar__box {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 #searchbar__travel {
@@ -104,7 +155,7 @@ img {
 }
 
 .downText {
-  font-size: 13px;
+  font-size: 14px;
   color: #6a6a6a;
 }
 
@@ -130,15 +181,17 @@ img {
 
 #nav__menuLayout {
   display: flex;
-  align-items: center;
+  height: 40px;
+  margin-top: 25px;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
+  gap: 0px;
 }
 
 #menuLayout__you {
   font-size: 14px;
   display: flex;
-  border-radius: 30px;
+  border-radius: 24px;
   padding: 13px;
 }
 #menuLayout__you:hover {
@@ -152,6 +205,7 @@ img {
   border-radius: 50px;
   padding: 8px 12px 8px 15px;
   align-items: center;
+
   justify-content: center;
   transition: 0.3s;
 }
@@ -161,7 +215,9 @@ img {
 #icon__people {
   color: #6a6a6a;
 }
-
+#menuLayout__user {
+  padding-left: 9px;
+}
 #search__button {
   border-radius: 100%;
   padding: 16px;
@@ -174,8 +230,13 @@ img {
 #search__button:hover {
   background-color: #de1162;
 }
+
+#search__button:hover + #searchbar__trabeler {
+  background-color: none;
+}
+
 #menuLayout__globe {
-  padding: 10px 16px;
+  padding: 12px 13px;
 
   border-radius: 50px;
 }
