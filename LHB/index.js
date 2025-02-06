@@ -16,8 +16,13 @@ const line2 = document.querySelector(".line2");
 const line3 = document.querySelector(".line3");
 //생성
 const bigBox = document.createElement("div");
+bigBox.style.display = "flex";
+bigBox.style.gap = "40px";
+bigBox.style.paddingLeft = "30px";
 const searchAnywhere = document.createElement("div");
+const searchline = document.createElement("div");
 const searchWeek = document.createElement("div");
+const searchline2 = document.createElement("div");
 const searchGuest = document.createElement("div");
 searchAnywhere.innerHTML = "어디든지";
 searchWeek.innerHTML = "언제든 ";
