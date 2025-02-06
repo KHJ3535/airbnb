@@ -1,0 +1,42 @@
+.title {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.main {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  display: flex;
+}
+h1 {
+  width: 100%;
+}
+.main_save {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.share {
+  background-color: white;
+  border: none;
+  font-size: 14px;
+}
+.save {
+  background-color: white;
+  border: none;
+  font-size: 14px;
+}
+.fa-heart {
+  padding-right: 5px;
+  color: gray;
+}
+.fa-arrow-up-from-bracket {
+  padding-right: 5px;
+  color: gray;
+}
