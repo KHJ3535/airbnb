@@ -4,6 +4,7 @@ const camp = document.getElementById("camping");
 const view = document.getElementById("bestview");
 const hanok = document.getElementById("hanok");
 const category = document.querySelectorAll(".main__category li");
+
 category.forEach((x) => {
   x.addEventListener("click", () => {
     const selectCategory = document.querySelector(".category__select");
@@ -28,7 +29,7 @@ data.forEach((x) => {
   const reviewSnippet = x.listing.structuredContent.reviewSnippet?.[0]
     ? `<span>게스트 한마디 </span>"<span class="black">${x.listing.structuredContent.reviewSnippet[0].body}</span>"`
     : "";
-  const contextualPictures = x.contextualPictures[0].picture;
+  const contextualPictures = x.contextualPictures.map((p) => p.picture); // 여러 이미지 처리
   const avgRatingLocalized =
     String(x.avgRatingLocalized) != "null"
       ? `<i class="fa-solid fa-star"></i> ` + x.avgRatingLocalized
@@ -38,25 +39,67 @@ data.forEach((x) => {
       ? `<p class="card__badges">${x.badges[0].text}</p>`
       : "";
 
+  const createSlide = (images) => {
+    const slideContainer = document.createElement("div");
+    slideContainer.classList.add("card__slide-container");
+
+    // Create image slide elements
+    images.forEach((image, index) => {
+      const img = document.createElement("img");
+      img.src = image;
+      img.alt = `card__img-${index}`;
+      img.classList.add("card__slide");
+      if (index !== 0) img.style.display = "none"; // hide all except the first
+      slideContainer.appendChild(img);
+    });
+
+    // Add slide navigation controls (optional)
+    const prevBtn = document.createElement("button");
+    prevBtn.classList.add("card__slide-prev");
+    prevBtn.innerHTML = "&lt;";
+    const nextBtn = document.createElement("button");
+    nextBtn.classList.add("card__slide-next");
+    nextBtn.innerHTML = "&gt;";
+
+    slideContainer.appendChild(prevBtn);
+    slideContainer.appendChild(nextBtn);
+
+    let currentSlide = 0;
+
+    // Slide navigation logic
+    const slides = slideContainer.querySelectorAll(".card__slide");
+    const showSlide = (index) => {
+      slides[currentSlide].style.display = "none";
+      currentSlide = (index + slides.length) % slides.length;
+      slides[currentSlide].style.display = "block";
+    };
+
+    prevBtn.addEventListener("click", () => showSlide(currentSlide - 1));
+    nextBtn.addEventListener("click", () => showSlide(currentSlide + 1));
+
+    return slideContainer;
+  };
+
   card.innerHTML = `
-      <a class="grid__card">
-        <div class="grid__card--img">
-            <img src="${contextualPictures}" alt="card__img"/>
-            ${badges}
-            <i class="card__heart fa-regular fa-heart"></i>
+    <a class="grid__card">
+      <div class="grid__card--img">
+        ${createSlide(contextualPictures).outerHTML} <!-- Insert the slider -->
+        ${badges}
+        <i class="card__heart fa-regular fa-heart"></i>
+      </div>
+      <div class="grid__card--info">
+        <div class="card__top">
+          <span class="card__title">${title}</span>
+          <span class="card__rate">${avgRatingLocalized}</span>
         </div>
-        <div class="grid__card--info">
-          <div class="card__top">
-            <span class="card__title">${title}</span>
-            <span class="card__rate">${avgRatingLocalized}</span>
-          </div>
-          <p class="card__primaryLine">${primaryLine}</p>
-          <p class="card__mapSecondaryLine">${mapSecondaryLine}</p>
-          <p class="card__reviewSnippet">${reviewSnippet}</p>
-          <p><span class="card__price">${price}</span> <span class="qualifier">${qualifier}</span></p>
-        </div>
-      </a>
-    `;
+        <p class="card__primaryLine">${primaryLine}</p>
+        <p class="card__mapSecondaryLine">${mapSecondaryLine}</p>
+        <p class="card__reviewSnippet">${reviewSnippet}</p>
+        <p><span class="card__price">${price}</span> <span class="qualifier">${qualifier}</span></p>
+      </div>
+    </a>
+  `;
+
   card.addEventListener("click", (e) => {
     location.href = `PJT/index.html?id=${id}`;
   });
@@ -72,7 +115,7 @@ data.forEach((x) => {
       const card = document.createElement("a");
       card.classList.add("grid__card");
 
-      const contextualPictures = v.contextualPictures[0].picture;
+      const contextualPictures = v.contextualPictures.map((p) => p.picture); // 여러 이미지 처리
       const title = v.listing.title;
       const primaryLine = v.listing.structuredContent.primaryLine[0].body;
       const mapSecondaryLine =
@@ -90,9 +133,11 @@ data.forEach((x) => {
 
       card.innerHTML = `
         <div class="grid__card--img">
-            <img src="${contextualPictures}" alt="card__img"/>
-            ${badges}
-            <i class="card__heart fa-regular fa-heart"></i>
+          ${
+            createSlide(contextualPictures).outerHTML
+          } <!-- Insert the slider -->
+          ${badges}
+          <i class="card__heart fa-regular fa-heart"></i>
         </div>
         <div class="grid__card--info">
           <div class="card__top">
@@ -112,6 +157,7 @@ data.forEach((x) => {
       gridCardList.appendChild(card);
     });
   });
+
   view.addEventListener("click", (e) => {
     gridCardList.innerHTML = "";
     const card = data.filter(
@@ -122,7 +168,7 @@ data.forEach((x) => {
       const card = document.createElement("a");
       card.classList.add("grid__card");
 
-      const contextualPictures = v.contextualPictures[0].picture;
+      const contextualPictures = v.contextualPictures.map((p) => p.picture); // 여러 이미지 처리
       const title = v.listing.title;
       const primaryLine = v.listing.structuredContent.primaryLine[0].body;
       const mapSecondaryLine =
@@ -140,9 +186,11 @@ data.forEach((x) => {
 
       card.innerHTML = `
         <div class="grid__card--img">
-            <img src="${contextualPictures}" alt="card__img"/>
-            ${badges}
-            <i class="card__heart fa-regular fa-heart"></i>
+          ${
+            createSlide(contextualPictures).outerHTML
+          } <!-- Insert the slider -->
+          ${badges}
+          <i class="card__heart fa-regular fa-heart"></i>
         </div>
         <div class="grid__card--info">
           <div class="card__top">
@@ -162,6 +210,7 @@ data.forEach((x) => {
       gridCardList.appendChild(card);
     });
   });
+
   hanok.addEventListener("click", (e) => {
     gridCardList.innerHTML = "";
     const card = data.filter(
@@ -172,7 +221,7 @@ data.forEach((x) => {
       const card = document.createElement("a");
       card.classList.add("grid__card");
 
-      const contextualPictures = v.contextualPictures[0].picture;
+      const contextualPictures = v.contextualPictures.map((p) => p.picture); // 여러 이미지 처리
       const title = v.listing.title;
       const primaryLine = v.listing.structuredContent.primaryLine[0].body;
       const mapSecondaryLine =
@@ -190,9 +239,11 @@ data.forEach((x) => {
 
       card.innerHTML = `
         <div class="grid__card--img">
-            <img src="${contextualPictures}" alt="card__img"/>
-            ${badges}
-            <i class="card__heart fa-regular fa-heart"></i>
+          ${
+            createSlide(contextualPictures).outerHTML
+          } <!-- Insert the slider -->
+          ${badges}
+          <i class="card__heart fa-regular fa-heart"></i>
         </div>
         <div class="grid__card--info">
           <div class="card__top">

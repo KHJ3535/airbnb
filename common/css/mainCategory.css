@@ -40,7 +40,7 @@ header {
 .main__category > li > p {
   padding-top: 10px;
   padding-bottom: 16px;
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(0, 0, 0, 1);
   transition: color 0.3s ease-in-out;
 }
 .main__category li:hover,
@@ -96,4 +96,9 @@ header {
 }
 .category__filter > i {
   padding-right: 6px;
+}
+@media screen and (max-width: 1128px) {
+  .catogory__container {
+    padding: 0 20px;
+  }
 }

@@ -1,5 +1,5 @@
 #grid__card--list {
-  padding-top: 120px;
+  padding-top: 300px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
@@ -40,6 +40,10 @@
   right: 15px;
   position: absolute;
   color: white;
+  transition: all 0.2s;
+}
+.card__heart:hover {
+  transform: scale(1.1);
 }
 .grid__card--info {
   padding: 10px 0px;
