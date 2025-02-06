@@ -1,11 +1,14 @@
 .container_info {
   width: 100%;
+  height: 100%;
   max-width: 1280px;
   margin: 0 auto;
+  display: flex;
 }
 .main_lay {
-  width: 628px;
+  width: 58%;
 }
+
 h2 {
   width: 628px;
   font-size: 22px;
@@ -30,7 +33,7 @@ h2 {
   padding-right: 3px;
 }
 .hotell_review {
-  width: 628px;
+  width: 100%;
 
   border: 1px solid rgb(211, 206, 206);
   border-radius: 10px;
@@ -43,6 +46,7 @@ h2 {
   font-size: 18px;
 }
 .guest {
+  width: 100%;
   height: 80px;
   display: flex;
   align-items: center;
@@ -57,7 +61,7 @@ img.guest_img {
 }
 .guest_rating {
   padding-left: 30px;
-  padding-right: 10px;
+  padding-right: 50px;
   font-size: 22px;
   margin: 0;
 
@@ -76,7 +80,7 @@ img.guest_img {
   border-bottom: 1px solid rgb(211, 206, 206);
 }
 .guest_num {
-  padding-left: 10px;
+  padding-left: 30px;
   font-size: 22px;
 
   display: flex;
@@ -131,7 +135,7 @@ img.guest_img {
 .host_info {
   padding-top: 20px;
   display: flex;
-  width: 49%;
+  width: 100%;
   border-bottom: 1px solid rgb(211, 206, 206);
 }
 .host_photo {
@@ -154,7 +158,7 @@ img.guest_img {
   display: flex;
 }
 .hotel_info {
-  width: 49%;
+  width: 98.5%;
   height: 50px;
   font-size: 16px;
   background-color: rgb(211, 206, 206);
@@ -186,7 +190,7 @@ img.guest_img {
   border-bottom: 1px solid rgb(211, 206, 206);
 }
 .layyyy {
-  width: 49%;
+  width: 100%;
   padding-bottom: 20px;
   border-bottom: 1px solid rgb(211, 206, 206);
 }
@@ -204,7 +208,6 @@ h3 {
 .ace {
   font-size: 14px;
   padding-bottom: 30px;
-  border-bottom: 1px solid rgb(211, 206, 206);
 }
 .map_layout {
   border-bottom: 1px solid rgb(211, 206, 206);
@@ -216,6 +219,8 @@ h3 {
   background-color: transparent;
 }
 h4 {
+  border-top: 1px solid rgb(211, 206, 206);
+  padding-top: 30px;
   font-size: 22px;
 }
 .place_layout {
@@ -243,6 +248,147 @@ h5 {
   border-bottom: 1px solid black;
 }
 
-.container_card-layout {
+.container_info > .container_card-layout {
+  width: 33% !important;
+
+  height: 100%;
+  float: right;
   position: relative;
+  position: sticky;
+}
+
+.card_box {
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
+
+  position: sticky;
+
+  margin-left: 50px;
+}
+.card_box-sub {
+  display: flex;
+  align-items: center;
+
+  padding-bottom: 15px;
+}
+.card {
+  font-size: 22px;
+}
+.card_num-day {
+  font-size: 16px;
+}
+.map_container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.card_check-layout {
+  border: 1px solid rgb(211, 206, 206);
+}
+.card_check {
+  width: 100%;
+  padding: 0px;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  padding-left: 10px;
+  padding-bottom: 15px;
+}
+.card_btn-checkin {
+  width: 100%;
+  display: flex;
+
+  background-color: transparent;
+  border: 1px solid rgb(211, 206, 206);
+  padding: 0;
+  border: none;
+
+  border-right: 1px solid rgb(211, 206, 206);
+}
+.card_btn-checkout {
+  width: 100%;
+  display: flex;
+  background-color: transparent;
+  border: 1px solid rgb(211, 206, 206);
+  border: none;
+  padding-left: 5px;
+}
+.card_btn-humebox {
+  width: 100%;
+  background-color: white;
+  right: 0px;
+  top: 118px;
+  border: none;
+}
+.card_btn-hume {
+  width: 100%;
+  border-top: 1px solid rgb(211, 206, 206);
+}
+.card_btn-hume-hidden {
+  /* display: none; */
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+.card_reserve-btn {
+  width: 100%;
+  color: white;
+  background-color: red;
+  border: none;
+  font-size: 16px;
+  border-radius: 12px;
+  margin-top: 20px;
+  padding: 17px;
+}
+.card_sub-info {
+  font-size: 16px;
+  padding: 0px;
+  counter-reset: rgb(34, 34, 34);
+  margin: 0px;
+}
+.card_sub-info-lay {
+  border: 1px solid rgb(211, 206, 206);
+  position: relative;
+  top: 25px;
+  border-radius: 12px;
+  padding: 5px;
+  margin-left: 50px;
+}
+.fa-diamond {
+  font-size: 30px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+.card_sub-info-tag {
+  padding-left: 50px;
+}
+.card_reserve-btn-info {
+  margin-left: 30px;
+  font-size: 13px;
+}
+.card_pay-lay {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card_pay-lay-all {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-top: 1px solid rgb(211, 206, 206);
+  padding-top: 10px;
+}
+.card_pay-num-day {
+  border-bottom: 1px solid rgb(151, 148, 148);
+}
+.card_btn-hidden-box {
+  position: absolute;
+  width: 320px;
+  justify-content: space-between;
+  display: none;
+  background-color: white;
 }
