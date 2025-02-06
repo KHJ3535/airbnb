@@ -7,13 +7,168 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/mainGrid.css" />
+    <link rel="stylesheet" href="css/mainCategory.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script type="module" src="index.js" defer></script>
     <script type="module" src="data.js" defer></script>
+    <script type="module" src="scroll.js" defer></script>
   </head>
   <body>
-    <header><nav></nav></header>
+    <header>
+      <nav class="container">
+        <div class="catogory__container">
+          <ul id="main__category" class="main__category">
+            <li id="camping" class="category__select">
+              <img src="KHJ/image/camping.jpg" alt="" />
+              <p>캠핑장</p>
+            </li>
+            <li id="bestview">
+              <img src="KHJ/image/bestview.jpg" alt="" />
+              <p>최고의 전망</p>
+            </li>
+            <li id="hanok">
+              <img src="KHJ/image/hanok.jpg" alt="" />
+              <p>한옥</p>
+            </li>
+            <li id="countryside">
+              <img src="KHJ/image/countryside.jpg" alt="" />
+              <p>한적한 시골</p>
+            </li>
+            <li id="hot">
+              <img src="KHJ/image/hot.jpg" alt="" />
+              <p>인기 급상승</p>
+            </li>
+            <li id="view">
+              <img src="KHJ/image/swim.jpg" alt="" />
+              <p>멋진 수영장</p>
+            </li>
+            <li id="view">
+              <img src="KHJ/image/beach.jpg" alt="" />
+              <p>해변 바로 앞</p>
+            </li>
+            <li id="unique">
+              <img src="KHJ/image/unique.jpg" alt="" />
+              <p>기상천외한 숙소</p>
+            </li>
+            <li id="mountain">
+              <img src="KHJ/image/mountain.jpg" alt="" />
+              <p>세상의 꼭대기</p>
+            </li>
+            <li id="farm">
+              <img src="KHJ/image/farm.jpg" alt="" />
+              <p>농장</p>
+            </li>
+            <li id="tropics">
+              <img src="KHJ/image/tropics.jpg" alt="" />
+              <p>열대 지역</p>
+            </li>
+            <li id="ryokan">
+              <img src="KHJ/image/ryokan.jpg" alt="" />
+              <p>료칸</p>
+            </li>
+            <li id="castle">
+              <img src="KHJ/image/castle.jpg" alt="" />
+              <p>캐슬</p>
+            </li>
+            <li id="nationalpark">
+              <img src="KHJ/image/nationalpark.jpg" alt="" />
+              <p>국립공원</p>
+            </li>
+            <li id="treehouse">
+              <img src="KHJ/image/treehouse.jpg" alt="" />
+              <p>트리하우스</p>
+            </li>
+            <li id="north">
+              <img src="KHJ/image/north.jpg" alt="" />
+              <p>북극</p>
+            </li>
+            <li id="room">
+              <img src="KHJ/image/room.jpg" alt="" />
+              <p>방</p>
+            </li>
+            <li id="kids">
+              <img src="KHJ/image/kids.jpg" alt="" />
+              <p>키즈</p>
+            </li>
+            <li id="worldly">
+              <img src="KHJ/image/worldly.jpg" alt="" />
+              <p>속세를 벗어난 숙소</p>
+            </li>
+            <li id="lake">
+              <img src="KHJ/image/lake.jpg" alt="" />
+              <p>호수 근처</p>
+            </li>
+            <li id="minimal">
+              <img src="KHJ/image/minimal.jpg" alt="" />
+              <p>초소형 주택</p>
+            </li>
+            <li id="symbol">
+              <img src="KHJ/image/symbol.jpg" alt="" />
+              <p>상징적 도시</p>
+            </li>
+            <li id="coversoil">
+              <img src="KHJ/image/coversoil.jpg" alt="" />
+              <p>통나무집</p>
+            </li>
+            <li id="campingcar">
+              <img src="KHJ/image/campingcar.jpg" alt="" />
+              <p>캠핑카</p>
+            </li>
+            <li id="island">
+              <img src="KHJ/image/island.jpg" alt="" />
+              <p>섬</p>
+            </li>
+            <li id="design">
+              <img src="KHJ/image/design.jpg" alt="" />
+              <p>디자인</p>
+            </li>
+            <li id="lake2">
+              <img src="KHJ/image/lake2.jpg" alt="" />
+              <p>호숫가</p>
+            </li>
+            <li id="surf">
+              <img src="KHJ/image/surf.jpg" alt="" />
+              <p>서핑</p>
+            </li>
+            <li id="cave">
+              <img src="KHJ/image/cave.jpg" alt="" />
+              <p>동굴</p>
+            </li>
+            <li id="golf">
+              <img src="KHJ/image/golf.jpg" alt="" />
+              <p>골프장</p>
+            </li>
+            <li id="ahouse">
+              <img src="KHJ/image/ahouse.jpg" alt="" />
+              <p>A자형 주택</p>
+            </li>
+            <li id="new">
+              <img src="KHJ/image/new.jpg" alt="" />
+              <p>신규</p>
+            </li>
+          </ul>
+
+          <div class="slide__left--box">
+            <button id="slideLeft" class="slide__btn slide__left">
+              <i class="fa-solid fa-angle-left"></i>
+            </button>
+          </div>
+          <div class="slide__right--box">
+            <button id="slideRight" class="slide__btn slide__right">
+              <i class="fa-solid fa-angle-right"></i>
+            </button>
+          </div>
+          <div id="category__filter" class="category__filter"></div>
+        </div>
+      </nav>
+    </header>
     <main class="container">
-      <nav id="category" class="category"></nav>
       <div id="grid__card--list"></div>
     </main>
     <footer></footer>

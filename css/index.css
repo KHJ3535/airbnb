@@ -1,23 +1,12 @@
+* {
+  font-family: "Noto Sans KR", serif;
+}
+
 .container {
   margin: 0 auto;
-  width: 1570px;
+  width: 1560px;
   max-width: 100%;
 }
-
-@media screen and (max-width: 1200px) {
-  #grid__card--list {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media screen and (max-width: 900px) {
-  #grid__card--list {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media screen and (max-width: 600px) {
-  #grid__card--list {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.none {
+  display: none;
 }

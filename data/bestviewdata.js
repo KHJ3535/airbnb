@@ -1,4 +1,4 @@
-const bestdata = [
+const bestviewdata = [
   {
     __typename: "StaySearchResult",
     listing: {
@@ -4257,4 +4257,4 @@ const bestdata = [
     ],
   },
 ];
-export default bestdata;
+export default bestviewdata;

@@ -1,30 +1,24 @@
 #grid__card--list {
+  padding-top: 120px;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
   max-width: 1600px;
   margin: 0 auto;
-  gap: 24px;
+  transition: all 0.3s ease-in-out;
 }
-
 .grid__card {
   width: 100%;
-  border-radius: 8px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
   overflow: hidden;
 }
-
 .grid__card--img {
   width: 100%;
-  position: relative;
   overflow: hidden;
-}
-
-.grid__card--img::after {
-  content: "";
-  display: block;
-  padding-top: 100%;
+  position: relative;
 }
 
 .grid__card--img img {
@@ -33,4 +27,130 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.grid__card--img::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+.card__heart {
+  font-size: 20px;
+  top: 15px;
+  right: 15px;
+  position: absolute;
+  color: white;
+}
+.grid__card--info {
+  padding: 10px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.card__top {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card__title,
+.card__reviewSnippet {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.fa-star {
+  font-size: 14px;
+  padding: 0;
+}
+.grid__card--info > p {
+  color: #555;
+  font-weight: 400;
+  font-size: 15px;
+}
+.black {
+  color: black;
+}
+.card__price {
+  margin-top: 10px;
+  color: black;
+  font-weight: 600;
+  font-size: 15px;
+}
+.qualifier {
+  font-weight: 400;
+  color: black;
+}
+.image-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.image-slider img {
+  width: 100%;
+  height: auto;
+  display: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.image-slider img.active {
+  display: block;
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.prev-btn {
+  left: 10px;
+}
+.next-btn {
+  right: 10px;
+}
+.card__badges {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  background-color: white;
+  font-size: 14px;
+  font-weight: 500;
+}
+@media screen and (max-width: 1128px) {
+  #grid__card--list {
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  #grid__card--list {
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 549px) {
+  #grid__card--list {
+    grid-template-columns: repeat(1, minmax(280px, 1fr));
+    padding: 0 20px;
+  }
 }
