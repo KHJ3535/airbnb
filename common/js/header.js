@@ -15,27 +15,58 @@ const line1 = document.querySelector(".line1");
 const line2 = document.querySelector(".line2");
 const line3 = document.querySelector(".line3");
 //생성
+
 const bigBox = document.createElement("div");
 bigBox.style.display = "flex";
-bigBox.style.gap = "40px";
+bigBox.style.cursor = "pointer";
+bigBox.style.gap = "13px";
 bigBox.style.paddingLeft = "30px";
+bigBox.style.alignItems = "center";
+
 const searchAnywhere = document.createElement("div");
-const searchline = document.createElement("div");
 const searchWeek = document.createElement("div");
-const searchline2 = document.createElement("div");
 const searchGuest = document.createElement("div");
+const searchGlass = document.createElement("div");
+const searchline = document.createElement("div");
+const searchline2 = document.createElement("div");
+
 searchAnywhere.innerHTML = "어디든지";
-searchWeek.innerHTML = "언제든 ";
+searchWeek.innerHTML = "언제든 일주일";
 searchGuest.innerHTML = "게스트 추가";
+searchGlass.innerHTML = '<i class="fas fa-search"></i>';
+
+searchAnywhere.style.display = "none";
+searchWeek.style.display = "none";
+searchGuest.style.display = "none";
+searchline.style.display = "none";
+searchline2.style.display = "none";
+searchGlass.style.display = "none";
+
+searchGlass.style.fontSize = "13px";
+searchGlass.style.color = "white";
+searchGlass.style.padding = "12px";
+searchGlass.style.backgroundColor = "#ff385c";
+searchGlass.style.borderRadius = "100%";
+
+searchGuest.style.color = "#6a6a6a";
+searchline.style.width = "1px";
+searchline.style.height = "23px";
+searchline.style.backgroundColor = "#6a6a6a";
+searchline2.style.width = "1px";
+searchline2.style.height = "23px";
+searchline2.style.backgroundColor = "#6a6a6a";
 
 bigBox.appendChild(searchAnywhere);
+bigBox.appendChild(searchline);
 bigBox.appendChild(searchWeek);
+bigBox.appendChild(searchline2);
 bigBox.appendChild(searchGuest);
+bigBox.appendChild(searchGlass);
 searchbar.appendChild(bigBox);
 
 // 스크롤 이벤트 리스너 추가
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 100) {
+  if (window.scrollY > 50) {
     searchLayout.classList.add("slideup");
     headerLine.classList.add("slideup2");
     nav.classList.add("navcut");
@@ -53,6 +84,9 @@ window.addEventListener("scroll", () => {
     searchAnywhere.style.display = "flex";
     searchWeek.style.display = "flex";
     searchGuest.style.display = "flex";
+    searchline.style.display = "flex";
+    searchline2.style.display = "flex";
+    searchGlass.style.display = "flex";
   } else {
     searchLayout.classList.remove("slideup");
     headerLine.classList.remove("slideup2");
@@ -70,5 +104,8 @@ window.addEventListener("scroll", () => {
     searchAnywhere.style.display = "none";
     searchWeek.style.display = "none";
     searchGuest.style.display = "none";
+    searchline.style.display = "none";
+    searchline2.style.display = "none";
+    searchGlass.style.display = "none";
   }
 });
