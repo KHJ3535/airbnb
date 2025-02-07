@@ -4,13 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Airbnb</title>
-    <link rel="stylesheet" href="./common/css/reset.css" />
-    <link rel="stylesheet" href="./common/css/index.css" />
-    <link rel="stylesheet" href="./common/css/mainGrid.css" />
-    <link rel="stylesheet" href="./common/css/mainCategory.css" />
-    <link rel="stylesheet" href="./common/css/popup.css" />
-    <link rel="stylesheet" href="./common/css/header.css" />
-    <link rel="stylesheet" href="./common/css/footer.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/maininfo.css" />
+    <link rel="stylesheet" href="./css/mainimg.css" />
+    <link rel="stylesheet" href="./css/mainguest.css" />
+    <link rel="stylesheet" href="./css/mainhotelin.css" />
+    <link rel="stylesheet" href="./css/stickybox.css" />
+    <link rel="stylesheet" href="../common/css/header2.css" />
+    <link rel="stylesheet" href="../common/css/footer.css" />
+    <link rel="stylesheet" href="../common/css/reset.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -18,18 +20,16 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script type="module" src="./common/data/data.js" defer></script>
-    <script type="module" src="./common/js/index.js" defer></script>
-    <script type="module" src="./common/js/scroll.js" defer></script>
-    <script type="module" src="./common/js/header.js" defer></script>
-    <script type="module" src="./common/js/popup.js" defer></script>
+    <script type="module" src="js/index.js" defer></script>
+    <script type="module" src="js/sticky.js" defer></script>
+    <script type="module" src="../common/js/header2.js" defer></script>
   </head>
   <body>
     <header>
       <nav id="nav">
-        <div id="nav__layout">
-          <a href="./index.html" id="nav__logoImg"
-            ><img src="./LHB/img/bnb.png" alt=""
+        <div id="nav__layout2">
+          <a href="../index.html" id="nav__logoImg"
+            ><img src="../LHB/img/bnb.png" alt=""
           /></a>
 
           <div id="searchLayout">
@@ -72,12 +72,10 @@
                 </div>
                 <div id="search__button">
                   <i class="fa-solid fa-magnifying-glass"></i>
-                  <!-- <div id="button__text">검색</div> -->
                 </div>
               </div>
             </div>
           </div>
-
           <div id="nav__menuLayout">
             <div id="menuLayout__you">당신의 공간을 에어비앤비하세요</div>
             <div id="menuLayout__globe"><i class="fa-solid fa-globe"></i></div>
@@ -93,188 +91,29 @@
         </div>
         <div id="header__line"></div>
       </nav>
-      <nav class="max__container">
-        <div class="catogory__container">
-          <ul id="main__category" class="main__category">
-            <li id="camping" class="category__select">
-              <img src="./KHJ/image/camping.jpg" alt="" />
-              <p>캠핑장</p>
-            </li>
-            <li id="bestview">
-              <img src="./KHJ/image/bestview.jpg" alt="" />
-              <p>최고의 전망</p>
-            </li>
-            <li id="hanok">
-              <img src="./KHJ/image/hanok.jpg" alt="" />
-              <p>한옥</p>
-            </li>
-            <li id="countryside">
-              <img src="./KHJ/image/countryside.jpg" alt="" />
-              <p>한적한 시골</p>
-            </li>
-            <li id="hot">
-              <img src="./KHJ/image/hot.jpg" alt="" />
-              <p>인기 급상승</p>
-            </li>
-            <li id="view">
-              <img src="./KHJ/image/swim.jpg" alt="" />
-              <p>멋진 수영장</p>
-            </li>
-            <li id="view">
-              <img src="./KHJ/image/beach.jpg" alt="" />
-              <p>해변 바로 앞</p>
-            </li>
-            <li id="unique">
-              <img src="./KHJ/image/unique.jpg" alt="" />
-              <p>기상천외한 숙소</p>
-            </li>
-            <li id="mountain">
-              <img src="./KHJ/image/mountain.jpg" alt="" />
-              <p>세상의 꼭대기</p>
-            </li>
-            <li id="farm">
-              <img src="./KHJ/image/farm.jpg" alt="" />
-              <p>농장</p>
-            </li>
-            <li id="tropics">
-              <img src="./KHJ/image/tropics.jpg" alt="" />
-              <p>열대 지역</p>
-            </li>
-            <li id="ryokan">
-              <img src="./KHJ/image/ryokan.jpg" alt="" />
-              <p>료칸</p>
-            </li>
-            <li id="castle">
-              <img src="./KHJ/image/castle.jpg" alt="" />
-              <p>캐슬</p>
-            </li>
-            <li id="nationalpark">
-              <img src="./KHJ/image/nationalpark.jpg" alt="" />
-              <p>국립공원</p>
-            </li>
-            <li id="treehouse">
-              <img src="./KHJ/image/treehouse.jpg" alt="" />
-              <p>트리하우스</p>
-            </li>
-            <li id="north">
-              <img src="./KHJ/image/north.jpg" alt="" />
-              <p>북극</p>
-            </li>
-            <li id="room">
-              <img src="./KHJ/image/room.jpg" alt="" />
-              <p>방</p>
-            </li>
-            <li id="kids">
-              <img src="./KHJ/image/kids.jpg" alt="" />
-              <p>키즈</p>
-            </li>
-            <li id="worldly">
-              <img src="./KHJ/image/worldly.jpg" alt="" />
-              <p>속세를 벗어난 숙소</p>
-            </li>
-            <li id="lake">
-              <img src="./KHJ/image/lake.jpg" alt="" />
-              <p>호수 근처</p>
-            </li>
-            <li id="minimal">
-              <img src="./KHJ/image/minimal.jpg" alt="" />
-              <p>초소형 주택</p>
-            </li>
-            <li id="symbol">
-              <img src="./KHJ/image/symbol.jpg" alt="" />
-              <p>상징적 도시</p>
-            </li>
-            <li id="coversoil">
-              <img src="./KHJ/image/coversoil.jpg" alt="" />
-              <p>통나무집</p>
-            </li>
-            <li id="campingcar">
-              <img src="./KHJ/image/campingcar.jpg" alt="" />
-              <p>캠핑카</p>
-            </li>
-            <li id="island">
-              <img src="./KHJ/image/island.jpg" alt="" />
-              <p>섬</p>
-            </li>
-            <li id="design">
-              <img src="./KHJ/image/design.jpg" alt="" />
-              <p>디자인</p>
-            </li>
-            <li id="lake2">
-              <img src="./KHJ/image/lake2.jpg" alt="" />
-              <p>호숫가</p>
-            </li>
-            <li id="surf">
-              <img src="./KHJ/image/surf.jpg" alt="" />
-              <p>서핑</p>
-            </li>
-            <li id="cave">
-              <img src="./KHJ/image/cave.jpg" alt="" />
-              <p>동굴</p>
-            </li>
-            <li id="golf">
-              <img src="./KHJ/image/golf.jpg" alt="" />
-              <p>골프장</p>
-            </li>
-            <li id="ahouse">
-              <img src="./KHJ/image/ahouse.jpg" alt="" />
-              <p>A자형 주택</p>
-            </li>
-            <li id="new">
-              <img src="./KHJ/image/new.jpg" alt="" />
-              <p>신규</p>
-            </li>
-          </ul>
-
-          <div class="slide__left--box">
-            <button id="slideLeft" class="slide__btn slide__left">
-              <i class="fa-solid fa-angle-left"></i>
-            </button>
-          </div>
-          <div class="slide__right--box">
-            <button id="slideRight" class="slide__btn slide__right">
-              <i class="fa-solid fa-angle-right"></i>
-            </button>
-          </div>
-          <div id="category__filter" class="category__filter">
-            <i class="fa-solid fa-sliders"></i>
-            <span>필터</span>
-          </div>
-        </div>
-      </nav>
-      <div id="popup" class="popup">
-        <div class="popup__header">
-          <h2>필터</h2>
-        </div>
-        <button class="accordion">숙소 유형</button>
-        <div class="panel">
-          <div class="popup__lodging--type">
-            <div class="type__all">모든 유형</div>
-            <div class="type__all">방</div>
-            <div class="type__all">집 전체</div>
-          </div>
-        </div>
-
-        <button class="accordion">1박 요금</button>
-        <div class="panel">
-          <div class="price__filter">
-            <div class="price__min">
-              <p>최저</p>
-              <input type="text" />
-            </div>
-            <div class="price__max">
-              <p>최고</p>
-              <input type="text" />
-            </div>
-          </div>
-        </div>
-        <button class="popup__btn">적용하기</button>
-      </div>
     </header>
-    <main class="max__container">
-      <section id="grid__card--list"></section>
-    </main>
-
+    <section class="title container">
+      <div class="main">
+        <h1 id="main__title"></h1>
+        <div class="main_save">
+          <div class="share">
+            <span
+              ><i class="fa-solid fa-arrow-up-from-bracket"></i
+              ><a href="#"> 공유하기</a></span
+            >
+          </div>
+          <div class="save">
+            <span
+              ><i class="fa-regular fa-heart"></i><a href="#"> 저장</a></span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container">
+      <div id="container_img" class="container_img"></div>
+    </section>
+    <section id="container_info" class="container_info"></section>
     <footer>
       <div id="footer__layout">
         <p id="nextTravel">다음 여행을 위한 추천 여행지</p>

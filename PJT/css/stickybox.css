@@ -1,0 +1,154 @@
+.maininfo__stickybox {
+  position: sticky;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  top: 120px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 40px 20px;
+  background: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.stickybox__title {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.stickybox__top {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.stickybox__price {
+  font-size: 24px;
+}
+.stickybox__price > span {
+  font-size: 16px;
+  font-weight: 400;
+}
+.stickybox__check {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.stickybox__check--top {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+}
+
+.stickybox__checkin,
+.stickybox__checkout {
+  flex: 1;
+  padding: 10px;
+  text-align: left;
+}
+
+.stickybox__checkin input,
+.stickybox__checkout input {
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  pointer-events: none;
+}
+
+.stickybox__check--bottom {
+  padding: 10px;
+  position: relative;
+}
+
+.stickybox__people {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px 0px;
+  border-radius: 5px;
+}
+.guest__text {
+  font-size: 14px;
+  color: #333;
+}
+.stickybox__people--dropdown {
+  display: none;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.stickybox__people--dropdown.active {
+  display: block;
+}
+.people-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.accordion__content {
+  display: none;
+  padding: 10px;
+  background: #f9f9f9;
+  border-top: 1px solid #ddd;
+}
+
+.accordion__content.active {
+  display: block;
+}
+
+.guest__control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+}
+
+.counter button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ddd;
+  background: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.counter span {
+  margin: 0 15px;
+  font-size: 16px;
+}
+
+.reservation__btn {
+  width: 100%;
+  background: #ff385c;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.total__price {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding-top: 30px;
+  border-top: 1px solid gray;
+  font-size: 16px;
+  font-weight: 700;
+}
+.price__guide {
+  text-align: center;
+  font-size: 14px;
+  margin: 18px 0px;
+}

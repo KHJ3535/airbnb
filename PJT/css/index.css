@@ -1,0 +1,45 @@
+.title {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.main {
+  width: 100%;
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+#main__title {
+  font-weight: 500;
+  font-size: 25px;
+}
+.main_save {
+  max-width: 1280px;
+  display: flex;
+  align-items: center;
+}
+.main_save > div {
+  padding-left: 12px;
+}
+.share {
+  background-color: white;
+  border: none;
+  font-size: 14px;
+}
+.save {
+  background-color: white;
+  border: none;
+  font-size: 14px;
+}
+.fa-heart {
+  padding-right: 5px;
+  color: gray;
+}
+.fa-arrow-up-from-bracket {
+  padding-right: 5px;
+  color: gray;
+}

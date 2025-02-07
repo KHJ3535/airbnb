@@ -1,0 +1,12 @@
+* {
+  font-family: "Noto Sans KR", serif;
+}
+
+.max__container {
+  margin: 0 auto;
+  width: 1560px;
+  max-width: 100%;
+}
+.none {
+  display: none;
+}
