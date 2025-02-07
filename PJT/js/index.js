@@ -198,7 +198,7 @@ newData.forEach((x) => {
             </div>
           </div>
         </div>
-        <button class="reservation__btn"><a href="../CJH/index.html?id=${id}">예약하기</a></button>
+        <button class="reservation__btn"><a href="../../CJH/index.html?id=${id}">예약하기</a></button>
         <p class="price__guide">예약 확정 전에는 요금이 청구되지 않습니다.</p>
 
         <div class="total__price">
