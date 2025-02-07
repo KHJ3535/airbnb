@@ -18,15 +18,15 @@ nav {
 #nav__layout {
   max-width: 1750px;
   width: 100%;
-  margin: auto;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   background-color: white;
 }
-#nav__layout {
-  max-width: 1560px;
+#nav__layout2 {
+  max-width: 1280px;
   width: 100%;
-  margin: auto;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   background-color: white;
@@ -38,6 +38,7 @@ nav {
   transition: 1s all;
 }
 #nav__logoImg {
+  width: 33%;
   margin-top: 30px;
 }
 img {
@@ -47,6 +48,7 @@ img {
 }
 
 #searchLayout {
+  width: 33%;
   transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
 }
 
@@ -197,10 +199,11 @@ img {
 }
 
 #nav__menuLayout {
+  width: 33%;
   display: flex;
   height: 40px;
   margin-top: 25px;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   gap: 0px;
 }
@@ -209,7 +212,7 @@ img {
   font-size: 14px;
   display: flex;
   border-radius: 24px;
-  padding: 13px;
+  padding: 13px 0px;
   cursor: pointer;
 }
 #menuLayout__you:hover {
