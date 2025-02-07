@@ -32,6 +32,7 @@ bigBox.appendChild(searchAnywhere);
 bigBox.appendChild(searchWeek);
 bigBox.appendChild(searchGuest);
 searchbar.appendChild(bigBox);
+
 // 스크롤 이벤트 리스너 추가
 window.addEventListener("scroll", () => {
   if (window.scrollY > 100) {
