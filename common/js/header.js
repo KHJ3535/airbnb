@@ -1,4 +1,3 @@
-// 요소 선택
 const searchLayoutBox = document.querySelector("#searchLayout__box");
 const searchLayout = document.querySelector("#searchLayout");
 const searchbar = document.querySelector("#searchbar");
@@ -11,6 +10,7 @@ const searchbar__travel = document.querySelector("#searchbar__travel");
 const searchbar__checkin = document.querySelector("#searchbar__checkin");
 const searchbar__checkout = document.querySelector("#searchbar__checkout");
 const searchbar__traveler = document.querySelector("#searchbar__traveler");
+const searchBtn = document.querySelector("#search__button");
 const line1 = document.querySelector(".line1");
 const line2 = document.querySelector(".line2");
 const line3 = document.querySelector(".line3");
@@ -19,7 +19,7 @@ const line3 = document.querySelector(".line3");
 const bigBox = document.createElement("div");
 bigBox.style.display = "flex";
 bigBox.style.cursor = "pointer";
-bigBox.style.gap = "13px";
+bigBox.style.gap = "17px";
 bigBox.style.paddingLeft = "30px";
 bigBox.style.alignItems = "center";
 
@@ -76,11 +76,11 @@ window.addEventListener("scroll", () => {
     searchbar__checkin.style.display = "none";
     searchbar__checkout.style.display = "none";
     searchbar__traveler.style.display = "none";
-
+    bigBox.style.display = "flex";
     line1.style.display = "none";
     line2.style.display = "none";
     line3.style.display = "none";
-
+    searchBtn.style.display = "none";
     searchAnywhere.style.display = "flex";
     searchWeek.style.display = "flex";
     searchGuest.style.display = "flex";
@@ -100,7 +100,8 @@ window.addEventListener("scroll", () => {
     line1.style.display = "block";
     line2.style.display = "block";
     line3.style.display = "block";
-
+    searchBtn.style.display = "block";
+    bigBox.style.display = "none";
     searchAnywhere.style.display = "none";
     searchWeek.style.display = "none";
     searchGuest.style.display = "none";

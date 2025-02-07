@@ -205,3 +205,6 @@ footer {
   margin-top: -13px;
   padding-bottom: 30px;
 }
+.ft__bold {
+  font-weight: 500;
+}

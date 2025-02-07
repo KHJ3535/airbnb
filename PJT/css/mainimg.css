@@ -39,3 +39,31 @@
   border-radius: 0px 0px 10px 0px;
   grid-area: 3 / 6 / 5 / 8;
 }
+
+@media screen and (max-width: 1270px) {
+  .container_img {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+  .main_img {
+    grid-area: 1 / 1 / 2 / 2;
+    border-radius: 0px;
+  }
+
+  .main_img-sub,
+  .main_img-sub-two,
+  .main_img-sub-three,
+  .main_img-for {
+    display: none;
+  }
+  .maininfo__left {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .maininfo__right {
+    display: none;
+  }
+}
