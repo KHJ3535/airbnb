@@ -93,4 +93,13 @@
   .catogory__container {
     padding: 0 20px;
   }
+  .main__category {
+    width: 100%;
+  }
+  .slide__right {
+    display: none;
+  }
+  .category__filter {
+    display: none;
+  }
 }

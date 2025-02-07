@@ -1,5 +1,4 @@
 header {
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -10,11 +9,9 @@ nav {
   top: 0;
   background-color: white;
 }
-
 .navcut {
   height: 90px;
 }
-
 #nav__layout {
   max-width: 1750px;
   width: 100%;

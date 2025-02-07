@@ -16,14 +16,6 @@ nav {
 }
 
 #nav__layout {
-  max-width: 1750px;
-  width: 100%;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  background-color: white;
-}
-#nav__layout {
   max-width: 1560px;
   width: 100%;
   margin: auto;
@@ -38,6 +30,7 @@ nav {
   transition: 1s all;
 }
 #nav__logoImg {
+  width: 20%;
   margin-top: 30px;
 }
 img {
@@ -47,6 +40,8 @@ img {
 }
 
 #searchLayout {
+  width: 60%;
+  margin-bottom: 20px;
   transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
 }
 
@@ -63,7 +58,7 @@ img {
 }
 
 .slideup {
-  transform: translateY(-65%);
+  transform: translateY(-85%);
 }
 
 #searchLayout__play {
@@ -197,6 +192,7 @@ img {
 }
 
 #nav__menuLayout {
+  width: 20%;
   display: flex;
   height: 40px;
   margin-top: 25px;

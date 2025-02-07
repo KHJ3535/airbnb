@@ -29,7 +29,7 @@ data.forEach((x) => {
   const reviewSnippet = x.listing.structuredContent.reviewSnippet?.[0]
     ? `<span>게스트 한마디 </span>"<span class="black">${x.listing.structuredContent.reviewSnippet[0].body}</span>"`
     : "";
-  const contextualPictures = x.contextualPictures.map((p) => p.picture); // 여러 이미지 처리
+  const contextualPictures = x.contextualPictures[0].picture;
   const avgRatingLocalized =
     String(x.avgRatingLocalized) != "null"
       ? `<i class="fa-solid fa-star"></i> ` + x.avgRatingLocalized
@@ -39,51 +39,10 @@ data.forEach((x) => {
       ? `<p class="card__badges">${x.badges[0].text}</p>`
       : "";
 
-  const createSlide = (images) => {
-    const slideContainer = document.createElement("div");
-    slideContainer.classList.add("card__slide-container");
-
-    // Create image slide elements
-    images.forEach((image, index) => {
-      const img = document.createElement("img");
-      img.src = image;
-      img.alt = `card__img-${index}`;
-      img.classList.add("card__slide");
-      if (index !== 0) img.style.display = "none"; // hide all except the first
-      slideContainer.appendChild(img);
-    });
-
-    // Add slide navigation controls (optional)
-    const prevBtn = document.createElement("button");
-    prevBtn.classList.add("card__slide-prev");
-    prevBtn.innerHTML = "&lt;";
-    const nextBtn = document.createElement("button");
-    nextBtn.classList.add("card__slide-next");
-    nextBtn.innerHTML = "&gt;";
-
-    slideContainer.appendChild(prevBtn);
-    slideContainer.appendChild(nextBtn);
-
-    let currentSlide = 0;
-
-    // Slide navigation logic
-    const slides = slideContainer.querySelectorAll(".card__slide");
-    const showSlide = (index) => {
-      slides[currentSlide].style.display = "none";
-      currentSlide = (index + slides.length) % slides.length;
-      slides[currentSlide].style.display = "block";
-    };
-
-    prevBtn.addEventListener("click", () => showSlide(currentSlide - 1));
-    nextBtn.addEventListener("click", () => showSlide(currentSlide + 1));
-
-    return slideContainer;
-  };
-
   card.innerHTML = `
     <a class="grid__card">
       <div class="grid__card--img">
-        ${createSlide(contextualPictures).outerHTML} <!-- Insert the slider -->
+        <img src="${contextualPictures}">
         ${badges}
         <i class="card__heart fa-regular fa-heart"></i>
       </div>

@@ -68,7 +68,7 @@ searchbar.appendChild(bigBox);
 window.addEventListener("scroll", () => {
   if (window.scrollY > 50) {
     searchLayout.classList.add("slideup");
-    headerLine.classList.add("slideup2");
+    headerLine.classList.add("slideup");
     nav.classList.add("navcut");
     nav__layout.classList.add("navcut");
     searchbar.classList.add("searchbar__small");
@@ -89,7 +89,7 @@ window.addEventListener("scroll", () => {
     searchGlass.style.display = "flex";
   } else {
     searchLayout.classList.remove("slideup");
-    headerLine.classList.remove("slideup2");
+    headerLine.classList.remove("slideup");
     nav.classList.remove("navcut");
     nav__layout.classList.remove("navcut");
     searchbar.classList.remove("searchbar__small");
