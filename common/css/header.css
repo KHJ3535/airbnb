@@ -16,7 +16,7 @@ nav {
 }
 
 #nav__layout {
-  max-width: 1560px;
+  max-width: 1700px;
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -32,6 +32,11 @@ nav {
 #nav__logoImg {
   width: 20%;
   margin-top: 30px;
+  margin-left: 60px;
+}
+
+#nav__logoImgHidden {
+  display: none;
 }
 img {
   width: 100px;
@@ -104,37 +109,40 @@ img {
 }
 
 #searchbar__travel {
+  width: 100%;
   border-radius: 90px;
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 66px;
-  padding: 0px 40px 0px 30px;
 }
 
 #searchbar__checkin {
+  width: 100%;
   border-radius: 90px;
   height: 66px;
-  padding: 0px 29px 0px 20px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 #searchbar__checkout {
+  width: 100%;
   border-radius: 90px;
   height: 66px;
-  padding: 0px 20px 0px 20px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 #searchbar__traveler {
+  width: 100%;
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
   height: 66px;
-
+  justify-content: space-between;
   border-radius: 30px;
-  padding: 0px 12px 0px 30px;
 }
 
 .search__blur:hover {
@@ -142,14 +150,15 @@ img {
 }
 
 .TextTravel {
-  width: 218px;
+  width: 90px;
 }
 .TextCheck {
-  width: 92px;
+  width: 60px;
 }
 
 .TextTraveler {
-  width: 183px;
+  width: 90px;
+  margin-right: 110px;
 }
 
 .upText {
@@ -189,6 +198,7 @@ img {
   justify-content: center;
   align-items: center;
   gap: 0px;
+  margin-right: 60px;
 }
 
 #menuLayout__you {
@@ -261,4 +271,53 @@ img {
 
 #icon__bar > i {
   font-size: 15px;
+}
+
+@media screen and (max-width: 1400px) {
+  #nav__logoImg {
+    display: none;
+  }
+  #nav__logoImgHidden {
+    display: block;
+    width: 20%;
+    margin-top: 30px;
+    margin-left: 60px;
+  }
+  #nav__logoImgHidden > img {
+    width: 32px;
+    object-fit: cover;
+    cursor: pointer;
+  }
+}
+#nav__layoutHidden {
+  width: 90%;
+
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  display: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: 1px solid #dddddd;
+  border-radius: 90px;
+  margin: 10px 0px 10px 0px;
+}
+
+@media screen and (max-width: 1000px) {
+  #nav__layout {
+    display: none;
+  }
+
+  #nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  #header__line {
+    display: none;
+  }
+
+  #nav__layoutHidden {
+    display: flex;
+    gap: 10px;
+  }
 }

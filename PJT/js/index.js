@@ -66,6 +66,7 @@ newData.forEach((x) => {
       <div class="maininfo__left">
       <div class="main_lay">
         <div class="main_lay-info">
+        <h4 class="hidden__title">사막에서 즐기는 텐트 투어</h4>
           <h3 class="main__title">${title}, ${name}</h3>
           <ul class="hotell_info">
             <li class="hotell_info-sub">최대 인원2명 <span>·</span></li>
@@ -112,9 +113,7 @@ newData.forEach((x) => {
           <div class="hotels_info-lay">
             <div class="hotels_info-laaa">
               <div class="hotel_info">
-                일부 정보는 자동 번역되었습니다.<button class="hotel_bogi">
-                  원문보기
-                </button>
+                일부 정보는 자동 번역되었습니다.<a class="hotel_bogi" href="#">원문보기</a>
               </div>
             </div>
           </div>
@@ -126,7 +125,7 @@ newData.forEach((x) => {
               식사 용품. 평화로운 시골에서 낭만적인 휴가를 보내고 싶은 커플을
               위해 설계되었습니다.
             </div>
-            <div><span class="dooooo">더 보기></span></div>
+            <div><a class="dooooo" href="#">더 보기</a></div>
           </div>
           <div class="place_layout-one">
             <div class="place">
@@ -143,9 +142,9 @@ newData.forEach((x) => {
           <div class="map_layout">
             <h4 class="hotel__location">위치</h4>
             <p>Luskintyre, 뉴사우스웨일스, 오스트레일리아</p>
-            <div class="map"></div>
+            <div class="map"><iframe class="google__map" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d65975.61021892927!2d151.9382238312475!3d-32.40026046895255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z7Jik7Iqk7Yq466CI7J2866as7JWEIOy6oO2VkeyepQ!5e0!3m2!1sko!2skr!4v1738910696131!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
             <span class="hotle__location-check">숙소 위치가 정확함을 확인했습니다. </span
-            ><button class="map_doooo">자세히 알아보기</button>
+            ><a class="map_doooo" href="#">자세히 알아보기</a>
           </div>
           <div class="place_layout">
             <h5 class="hotle__place-info-title">지역 정보</h5>
@@ -156,7 +155,7 @@ newData.forEach((x) => {
               취하고 진정으로 중요한 것에 대해 다시 소통할 수 있는 기회를 가질
               수 있도록 여러분을 초대합니다.
             </div>
-            <button class="place_info">더 보기 ></button>
+            <a class="place_info" href="#">더 보기</a>
           </div>
         </div>
       </div>
@@ -199,7 +198,7 @@ newData.forEach((x) => {
             </div>
           </div>
         </div>
-        <button class="reservation__btn">예약하기</button>
+        <button class="reservation__btn"><a href="../CJH/index.html?id=${id}">예약하기</a></button>
         <p class="price__guide">예약 확정 전에는 요금이 청구되지 않습니다.</p>
 
         <div class="total__price">

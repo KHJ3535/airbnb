@@ -138,6 +138,11 @@
   font-size: 14px;
   font-weight: 500;
 }
+@media screen and (max-width: 1270px) {
+  #grid__card--list {
+    padding: 0 20px;
+  }
+}
 @media screen and (max-width: 1128px) {
   #grid__card--list {
     grid-template-columns: repeat(3, minmax(280px, 1fr));
