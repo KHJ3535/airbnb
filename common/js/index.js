@@ -74,7 +74,7 @@ data.forEach((x) => {
       const card = document.createElement("a");
       card.classList.add("grid__card");
 
-      const contextualPictures = v.contextualPictures.map((p) => p.picture); // 여러 이미지 처리
+      const contextualPictures = v.contextualPictures[0].picture;
       const title = v.listing.title;
       const primaryLine = v.listing.structuredContent.primaryLine[0].body;
       const mapSecondaryLine =
@@ -91,22 +91,23 @@ data.forEach((x) => {
           : "";
 
       card.innerHTML = `
-        <div class="grid__card--img">
-          ${
-            createSlide(contextualPictures).outerHTML
-          } <!-- Insert the slider -->
-          ${badges}
-          <i class="card__heart fa-regular fa-heart"></i>
-        </div>
-        <div class="grid__card--info">
-          <div class="card__top">
-            <span class="card__title">${title}</span>
-            <span class="card__rate">${avgRatingLocalized}</span>
+        <a class="grid__card">
+          <div class="grid__card--img">
+            <img src="${contextualPictures}">
+            ${badges}
+            <i class="card__heart fa-regular fa-heart"></i>
           </div>
-          <p class="card__primaryLine">${primaryLine}</p>
-          <p class="card__mapSecondaryLine">${mapSecondaryLine}</p>
-          <p><span class="card__price">${price}</span> <span class="qualifier">${qualifier}</span></p>
-        </div>
+          <div class="grid__card--info">
+            <div class="card__top">
+              <span class="card__title">${title}</span>
+              <span class="card__rate">${avgRatingLocalized}</span>
+            </div>
+            <p class="card__primaryLine">${primaryLine}</p>
+            <p class="card__mapSecondaryLine">${mapSecondaryLine}</p>
+            <p class="card__reviewSnippet">${reviewSnippet}</p>
+            <p><span class="card__price">${price}</span> <span class="qualifier">${qualifier}</span></p>
+          </div>
+        </a>
       `;
 
       card.addEventListener("click", (e) => {
@@ -127,7 +128,7 @@ data.forEach((x) => {
       const card = document.createElement("a");
       card.classList.add("grid__card");
 
-      const contextualPictures = v.contextualPictures.map((p) => p.picture); // 여러 이미지 처리
+      const contextualPictures = v.contextualPictures[0].picture;
       const title = v.listing.title;
       const primaryLine = v.listing.structuredContent.primaryLine[0].body;
       const mapSecondaryLine =
@@ -144,22 +145,23 @@ data.forEach((x) => {
           : "";
 
       card.innerHTML = `
-        <div class="grid__card--img">
-          ${
-            createSlide(contextualPictures).outerHTML
-          } <!-- Insert the slider -->
-          ${badges}
-          <i class="card__heart fa-regular fa-heart"></i>
-        </div>
-        <div class="grid__card--info">
-          <div class="card__top">
-            <span class="card__title">${title}</span>
-            <span class="card__rate">${avgRatingLocalized}</span>
+        <a class="grid__card">
+          <div class="grid__card--img">
+            <img src="${contextualPictures}">
+            ${badges}
+            <i class="card__heart fa-regular fa-heart"></i>
           </div>
-          <p class="card__primaryLine">${primaryLine}</p>
-          <p class="card__mapSecondaryLine">${mapSecondaryLine}</p>
-          <p><span class="card__price">${price}</span> <span class="qualifier">${qualifier}</span></p>
-        </div>
+          <div class="grid__card--info">
+            <div class="card__top">
+              <span class="card__title">${title}</span>
+              <span class="card__rate">${avgRatingLocalized}</span>
+            </div>
+            <p class="card__primaryLine">${primaryLine}</p>
+            <p class="card__mapSecondaryLine">${mapSecondaryLine}</p>
+            <p class="card__reviewSnippet">${reviewSnippet}</p>
+            <p><span class="card__price">${price}</span> <span class="qualifier">${qualifier}</span></p>
+          </div>
+        </a>
       `;
 
       card.addEventListener("click", (e) => {
@@ -180,7 +182,7 @@ data.forEach((x) => {
       const card = document.createElement("a");
       card.classList.add("grid__card");
 
-      const contextualPictures = v.contextualPictures.map((p) => p.picture); // 여러 이미지 처리
+      const contextualPictures = v.contextualPictures[0].picture;
       const title = v.listing.title;
       const primaryLine = v.listing.structuredContent.primaryLine[0].body;
       const mapSecondaryLine =
@@ -197,22 +199,23 @@ data.forEach((x) => {
           : "";
 
       card.innerHTML = `
-        <div class="grid__card--img">
-          ${
-            createSlide(contextualPictures).outerHTML
-          } <!-- Insert the slider -->
-          ${badges}
-          <i class="card__heart fa-regular fa-heart"></i>
-        </div>
-        <div class="grid__card--info">
-          <div class="card__top">
-            <span class="card__title">${title}</span>
-            <span class="card__rate">${avgRatingLocalized}</span>
+        <a class="grid__card">
+          <div class="grid__card--img">
+            <img src="${contextualPictures}">
+            ${badges}
+            <i class="card__heart fa-regular fa-heart"></i>
           </div>
-          <p class="card__primaryLine">${primaryLine}</p>
-          <p class="card__mapSecondaryLine">${mapSecondaryLine}</p>
-          <p><span class="card__price">${price}</span> <span class="qualifier">${qualifier}</span></p>
-        </div>
+          <div class="grid__card--info">
+            <div class="card__top">
+              <span class="card__title">${title}</span>
+              <span class="card__rate">${avgRatingLocalized}</span>
+            </div>
+            <p class="card__primaryLine">${primaryLine}</p>
+            <p class="card__mapSecondaryLine">${mapSecondaryLine}</p>
+            <p class="card__reviewSnippet">${reviewSnippet}</p>
+            <p><span class="card__price">${price}</span> <span class="qualifier">${qualifier}</span></p>
+          </div>
+        </a>
       `;
 
       card.addEventListener("click", (e) => {

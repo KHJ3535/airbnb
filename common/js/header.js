@@ -109,3 +109,34 @@ window.addEventListener("scroll", () => {
     searchGlass.style.display = "none";
   }
 });
+searchbar__travel.addEventListener("mouseover", () => {
+  line1.classList.add("opacityLine");
+});
+searchbar__travel.addEventListener("mouseout", () => {
+  line1.classList.remove("opacityLine");
+});
+
+searchbar__checkin.addEventListener("mouseover", () => {
+  line2.classList.add("opacityLine");
+  line1.classList.add("opacityLine");
+});
+
+searchbar__checkin.addEventListener("mouseout", () => {
+  line2.classList.remove("opacityLine");
+  line1.classList.remove("opacityLine");
+});
+
+searchbar__checkout.addEventListener("mouseover", () => {
+  line3.classList.add("opacityLine");
+  line2.classList.add("opacityLine");
+});
+searchbar__checkout.addEventListener("mouseout", () => {
+  line3.classList.remove("opacityLine");
+  line2.classList.remove("opacityLine");
+});
+searchbar__traveler.addEventListener("mouseover", () => {
+  line3.classList.add("opacityLine");
+});
+searchbar__traveler.addEventListener("mouseout", () => {
+  line3.classList.remove("opacityLine");
+});

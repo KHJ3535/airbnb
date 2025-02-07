@@ -51,7 +51,7 @@ newData.forEach((x) => {
         />
         <img
           class="main_img-for"
-          src="	${contextualPictures4}"
+          src="   ${contextualPictures4}"
           alt=""
         />
     `;
@@ -79,11 +79,8 @@ newData.forEach((x) => {
           <div class="sub_info">
             <ul class="sub_info-list">
               <li class="sub_info-list-one">
-                <img
-                  class="tro"
-                  src="https://a0.muscache.com/im/pictures/airbnb-platform-assets/AirbnbPlatformAssets-guestFavorite/original/4d090f93-f9a5-4f06-95e4-ca737c0d0ab5.png"
-                  alt=""
-                />상위 10% 숙소
+                <i class="fa-solid fa-trophy"></i>
+                상위 10% 숙소
               </li>
               <li class="sub_info-list-two">
                 <i class="fa-solid fa-medal"></i>슈퍼호스트
@@ -133,7 +130,7 @@ newData.forEach((x) => {
           </div>
           <div class="place_layout-one">
             <div class="place">
-              <h3>숙박 장소</h3>
+              <h3 class="room_place-one">숙박 장소</h3>
               <img
                 class="room_photo"
                 src="https://a0.muscache.com/im/pictures/56651653/23ae78d2_original.jpg?im_w=320&im_format=avif"
@@ -144,15 +141,15 @@ newData.forEach((x) => {
             </div>
           </div>
           <div class="map_layout">
-            <h4>위치</h4>
+            <h4 class="hotel__location">위치</h4>
             <p>Luskintyre, 뉴사우스웨일스, 오스트레일리아</p>
             <div class="map"></div>
-            <span class="">숙소 위치가 정확함을 확인했습니다. </span
+            <span class="hotle__location-check">숙소 위치가 정확함을 확인했습니다. </span
             ><button class="map_doooo">자세히 알아보기</button>
           </div>
           <div class="place_layout">
-            <h5>지역 정보</h5>
-            <div>
+            <h5 class="hotle__place-info-title">지역 정보</h5>
+            <div class="hotle__place-info">
               저희는 저희 농장을 사랑하며, 이 아름다운 지역에서 살 수 있어서
               정말 행운이라고 생각합니다. 저희는 이러한 평온함, 평화, 아름다움의
               느낌을 여러분과 공유하고 싶으며, 여러분이 도니브룩에서 휴식을

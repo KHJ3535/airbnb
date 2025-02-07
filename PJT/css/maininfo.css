@@ -17,7 +17,8 @@
   width: 30%;
 }
 .main_lay-info {
-  padding: 30px 0px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .main__title {
   font-size: 20px;
@@ -100,11 +101,11 @@ img.guest_img {
   line-height: 0px;
 }
 .sub_info {
-  width: 49%;
+  width: 100%;
   border-bottom: 1px solid rgb(211, 206, 206);
 
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
 }
 .sub_info-list {
   width: 100%;
@@ -124,24 +125,30 @@ img.guest_img {
   grid-area: 1 / 1 / 2 / 2;
   display: flex;
   align-items: center;
+  padding-bottom: 10px;
 }
 .sub_info-list-two {
   grid-area: 2 / 1 / 3 / 2;
+  padding-bottom: 10px;
 }
 .sub_info-list-three {
   grid-area: 3 / 1 / 4 / 2;
+  padding-bottom: 10px;
 }
 .sub_info-list-for {
   grid-area: 1 / 2 / 2 / 3;
+  padding-bottom: 10px;
 }
 .sub_info-list-five {
   grid-area: 2 / 2 / 3 / 3;
+  padding-bottom: 10px;
 }
 .tro {
   height: 20px;
 }
 .host_info {
-  padding-top: 20px;
+  padding-top: 24px;
+  padding-bottom: 24px;
   display: flex;
   width: 100%;
   border-bottom: 1px solid rgb(211, 206, 206);
@@ -192,7 +199,9 @@ img.guest_img {
 .infooooo {
   width: 100%;
   font-size: 16px;
+  line-height: 1.5rem;
   padding-top: 25px;
+  padding-bottom: 15px;
 }
 .dooooo {
   border-bottom: 1px solid rgb(211, 206, 206);
@@ -202,12 +211,20 @@ img.guest_img {
   padding-bottom: 20px;
   border-bottom: 1px solid rgb(211, 206, 206);
 }
-h3 {
+.place {
+  padding-top: 48px;
+  padding-bottom: 48px;
+
+  border-bottom: 1px solid rgb(211, 206, 206);
+}
+.room_place-one {
   font-size: 22px;
   font-weight: 500;
+  padding-bottom: 20px;
 }
 .room_photo {
   border-radius: 10px;
+  width: 300px;
 }
 .room {
   padding-top: 13px;
@@ -215,7 +232,6 @@ h3 {
 }
 .ace {
   font-size: 14px;
-  padding-bottom: 30px;
 }
 .map_layout {
   border-bottom: 1px solid rgb(211, 206, 206);
@@ -226,13 +242,14 @@ h3 {
   border-bottom: 1px solid rgb(211, 206, 206);
   background-color: transparent;
 }
-h4 {
+.hotel__location {
   border-top: 1px solid rgb(211, 206, 206);
   padding-top: 30px;
+  padding-bottom: 20px;
   font-size: 22px;
 }
 .place_layout {
-  border-bottom: 1px solid rgb(211, 206, 206);
+  /* border-bottom: 1px solid rgb(211, 206, 206); */
   padding-bottom: 20px;
 }
 h5 {
@@ -399,4 +416,35 @@ h5 {
   justify-content: space-between;
   display: none;
   background-color: white;
+}
+.hotel__location-check {
+  line-height: 1.5rem;
+}
+p {
+  line-height: 1.5rem;
+}
+.hotle__place-info-title {
+  font-size: 22px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+.hotle__place-info {
+  line-height: 1.5rem;
+}
+.fa-solid {
+  padding-right: 5px;
+}
+@media screen and (max-width: 720px) {
+  .main__title {
+    font-size: 26px;
+  }
+
+  .container_img {
+    grid-template-columns: 1fr;
+  }
+  /* html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  } */
 }
