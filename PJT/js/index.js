@@ -102,7 +102,7 @@ newData.forEach((x) => {
           <div class="host_info">
             <img
               class="host_photo"
-              src="https://a0.muscache.com/im/users/23360904/profile_pic/1415242605/original.jpg?im_w=240&im_format=avif"
+              src="${contextualPictures1}"
               alt=""
             />
             <div class="host_name">
@@ -198,7 +198,7 @@ newData.forEach((x) => {
             </div>
           </div>
         </div>
-        <button class="reservation__btn"><a href="../../CJH/index.html?id=${id}">예약하기</a></button>
+        <button class="reservation__btn"><a href="/airbnb/CJH/index.html?id=${id}">예약하기</a></button>
         <p class="price__guide">예약 확정 전에는 요금이 청구되지 않습니다.</p>
 
         <div class="total__price">
