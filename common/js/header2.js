@@ -82,3 +82,10 @@ bigBox.appendChild(searchline2);
 bigBox.appendChild(searchGuest);
 bigBox.appendChild(searchGlass);
 searchbar.appendChild(bigBox);
+
+///////
+const user__icon = document.getElementById("user__icon");
+const user__menu = document.querySelector(".user__menu");
+user__icon.addEventListener("click", () => {
+  user__menu.classList.toggle("block");
+});

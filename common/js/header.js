@@ -141,3 +141,10 @@ searchbar__traveler.addEventListener("mouseover", () => {
 searchbar__traveler.addEventListener("mouseout", () => {
   line3.classList.remove("opacityLine");
 });
+
+/////// 로그인
+const user__icon = document.getElementById("user__icon");
+const user__menu = document.querySelector(".user__menu");
+user__icon.addEventListener("click", () => {
+  user__menu.classList.toggle("block");
+});
