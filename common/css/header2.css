@@ -13,7 +13,6 @@ nav {
   height: 90px;
 }
 #nav__layout {
-  max-width: 1750px;
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -21,7 +20,6 @@ nav {
   background-color: white;
 }
 #nav__layout2 {
-  max-width: 1400px;
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -35,7 +33,7 @@ nav {
   transition: 1s all;
 }
 #nav__logoImg {
-  width: 33%;
+  width: 100%;
   margin-top: 30px;
   margin-left: 50px;
 }
@@ -47,7 +45,7 @@ img {
 }
 
 #searchLayout {
-  width: 33%;
+  width: 100%;
   transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
 }
 
@@ -144,19 +142,21 @@ img {
 }
 
 #searchbar__traveler {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
   height: 66px;
   border-radius: 30px;
-  padding: 0px 12px 0px 30px;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .search__blur:hover {
   background-color: #ebebeb;
 }
-
+#searchbar__traveler:hover {
+  background-color: #ebebeb;
+}
 .TextTravel {
   width: 218px;
 }
@@ -191,10 +191,11 @@ img {
 
 #search__button {
   display: flex;
+  margin-right: 10px;
 }
 
 #nav__menuLayout {
-  width: 33%;
+  width: 100%;
   display: flex;
   height: 40px;
   margin-top: 25px;
@@ -214,8 +215,8 @@ img {
 #menuLayout__you:hover {
   background-color: #f7f7f7;
 }
-
 #user__icon {
+  position: relative;
   display: flex;
   gap: 15px;
   border: 1px solid #dddddd;
@@ -233,7 +234,39 @@ img {
 #icon__people {
   color: #6a6a6a;
 }
+.user__menu {
+  position: absolute;
+  top: 56px;
+  right: 0;
+  width: 240px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  z-index: 15;
+  border-radius: 8px;
+  background-color: white;
+  display: none;
+}
+.user__menu > ul {
+  font-size: 14px;
+}
+.user__menu > ul > li {
+  line-height: 40px;
+}
+.block {
+  display: block;
+}
+.user__menu > ul:first-child {
+  padding: 10px;
+}
+.user__menu > ul:first-child > li:first-child {
+  font-weight: 500;
+}
+.user__menu > ul:last-child {
+  border-top: 1px solid lightgray;
+  padding: 10px;
+}
 #menuLayout__user {
+  display: flex;
+  flex-direction: row;
   padding-left: 9px;
 }
 #search__button {

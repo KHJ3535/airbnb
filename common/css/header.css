@@ -57,7 +57,6 @@ img {
 #searchLayout__box {
   display: flex;
   gap: 19px;
-
   justify-content: center;
   margin: 20px 0px 23px 0px;
 }
@@ -141,7 +140,6 @@ img {
   align-items: center;
   justify-content: center;
   height: 66px;
-  justify-content: space-between;
   border-radius: 30px;
 }
 
@@ -158,7 +156,6 @@ img {
 
 .TextTraveler {
   width: 90px;
-  margin-right: 110px;
 }
 
 .upText {
@@ -188,6 +185,7 @@ img {
 
 #search__button {
   display: flex;
+  margin-right: 10px;
 }
 
 #nav__menuLayout {
@@ -214,6 +212,7 @@ img {
 }
 
 #user__icon {
+  position: relative;
   display: flex;
   gap: 15px;
   border: 1px solid #dddddd;
@@ -230,6 +229,37 @@ img {
 }
 #icon__people {
   color: #6a6a6a;
+}
+
+.user__menu {
+  position: absolute;
+  top: 56px;
+  right: 0;
+  width: 240px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  z-index: 15;
+  border-radius: 8px;
+  background-color: white;
+  display: none;
+}
+.user__menu > ul {
+  font-size: 14px;
+}
+.user__menu > ul > li {
+  line-height: 40px;
+}
+.block {
+  display: block;
+}
+.user__menu > ul:first-child {
+  padding: 10px;
+}
+.user__menu > ul:first-child > li:first-child {
+  font-weight: 500;
+}
+.user__menu > ul:last-child {
+  border-top: 1px solid lightgray;
+  padding: 10px;
 }
 #menuLayout__user {
   padding-left: 9px;
@@ -302,7 +332,7 @@ img {
   margin: 10px 0px 10px 0px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1128px) {
   #nav__layout {
     display: none;
   }

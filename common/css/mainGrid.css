@@ -140,26 +140,26 @@
 }
 @media screen and (max-width: 1270px) {
   #grid__card--list {
-    padding: 0 20px;
+    padding: 300px 20px 0px 20px;
   }
 }
 @media screen and (max-width: 1128px) {
   #grid__card--list {
     grid-template-columns: repeat(3, minmax(280px, 1fr));
-    padding: 0 20px;
+    padding: 200px 20px 0px 20px;
   }
 }
 
 @media screen and (max-width: 749px) {
   #grid__card--list {
     grid-template-columns: repeat(2, minmax(280px, 1fr));
-    padding: 0 20px;
+    padding: 200px 20px 0px 20px;
   }
 }
 
 @media screen and (max-width: 549px) {
   #grid__card--list {
     grid-template-columns: repeat(1, minmax(280px, 1fr));
-    padding: 0 20px;
+    padding: 200px 20px 0px 20px;
   }
 }
