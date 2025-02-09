@@ -102,7 +102,7 @@ newData.forEach((x) => {
           <div class="host_info">
             <img
               class="host_photo"
-              src="${contextualPictures1}"
+              src="https://a0.muscache.com/im/users/23360904/profile_pic/1415242605/original.jpg?im_w=240&im_format=avif"
               alt=""
             />
             <div class="host_name">
