@@ -6,6 +6,7 @@
   max-width: 1600px;
   margin: 0 auto;
   transition: all 0.3s ease-in-out;
+  overflow-x: hidden;
 }
 .grid__card {
   width: 100%;
