@@ -13,7 +13,7 @@ export function showModal(content) {
   overlay.style.display = "flex";
   overlay.style.justifyContent = "center";
   overlay.style.alignItems = "center";
-  overlay.style.zIndex = "100"; // z-index 설정
+  overlay.style.zIndex = "100";
 
   const modal = document.createElement("div");
   modal.id = "custom-modal";

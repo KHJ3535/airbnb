@@ -19,7 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
         article1.insertBefore(section7, fourthChild);
       }
     } else {
-      // 화면 크기가 768px 이상일 때 원래 위치로 되돌리기
       if (section5 && article2) {
         article2.insertBefore(section5, article2.firstChild);
       }
@@ -32,9 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // 초기 실행
   moveElements();
 
-  // 화면 크기 변경 시 실행
   window.addEventListener("resize", moveElements);
 });

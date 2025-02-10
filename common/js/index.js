@@ -40,6 +40,7 @@ data.forEach((x) => {
       : "";
 
   card.innerHTML = `
+    <section>
     <a class="grid__card">
       <div class="grid__card--img">
         <img src="${contextualPictures}">
@@ -57,6 +58,7 @@ data.forEach((x) => {
         <p><span class="card__price">${price}</span> <span class="qualifier">${qualifier}</span></p>
       </div>
     </a>
+    </section>
   `;
 
   card.addEventListener("click", (e) => {
@@ -91,6 +93,7 @@ data.forEach((x) => {
           : "";
 
       card.innerHTML = `
+        <section>
         <a class="grid__card">
           <div class="grid__card--img">
             <img src="${contextualPictures}">
@@ -108,6 +111,7 @@ data.forEach((x) => {
             <p><span class="card__price">${price}</span> <span class="qualifier">${qualifier}</span></p>
           </div>
         </a>
+        </section>
       `;
 
       card.addEventListener("click", (e) => {
@@ -145,6 +149,7 @@ data.forEach((x) => {
           : "";
 
       card.innerHTML = `
+        <section>
         <a class="grid__card">
           <div class="grid__card--img">
             <img src="${contextualPictures}">
@@ -162,6 +167,7 @@ data.forEach((x) => {
             <p><span class="card__price">${price}</span> <span class="qualifier">${qualifier}</span></p>
           </div>
         </a>
+        </section>
       `;
 
       card.addEventListener("click", (e) => {
@@ -199,6 +205,7 @@ data.forEach((x) => {
           : "";
 
       card.innerHTML = `
+        <section>
         <a class="grid__card">
           <div class="grid__card--img">
             <img src="${contextualPictures}">
@@ -216,6 +223,7 @@ data.forEach((x) => {
             <p><span class="card__price">${price}</span> <span class="qualifier">${qualifier}</span></p>
           </div>
         </a>
+        </section>
       `;
 
       card.addEventListener("click", (e) => {
